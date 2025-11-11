@@ -13,10 +13,6 @@ export function HeroCodeOverlay() {
 
         <p className="text-slate-600 max-w-prose">{profile.summary}</p>
 
-        <a href="/contact" className="btn btn-primary">
-          Contact Me
-        </a>
-
         <div className="flex flex-wrap items-center gap-4 text-sm text-slate-600">
           <span>{profile.location}</span>
           <a className="link" href={`mailto:${profile.email}`}>
