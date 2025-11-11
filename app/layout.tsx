@@ -4,7 +4,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Marc Jason Yu — Software Engineer",
+  title: "Marc Jason Yu - Software Engineer",
   description: "Software Engineer — Power Platform + Azure",
 };
 
