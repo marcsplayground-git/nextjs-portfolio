@@ -7,11 +7,12 @@ export function Footer() {
           <a className="link" href="mailto:yu.marcjason@outlook.com">
             Email
           </a>
-          <a className="link" href="https://www.linkedin.com" target="_blank">
+          <a
+            className="link"
+            href="https://www.linkedin.com/in/marc-jason-yu/"
+            target="_blank"
+          >
             LinkedIn
-          </a>
-          <a className="link" href="https://github.com" target="_blank">
-            GitHub
           </a>
         </div>
       </div>

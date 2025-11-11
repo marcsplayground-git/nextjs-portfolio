@@ -1,4 +1,3 @@
-import { Hero } from "@/components/Hero";
 import { SectionHeader } from "@/components/SectionHeader";
 import { Projects } from "@/components/Projects";
 import { Certifications } from "@/components/Certifications";

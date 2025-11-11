@@ -11,7 +11,7 @@ const links: { href: Route; label: string }[] = [
   { href: "/projects", label: "Projects" },
   { href: "/skills", label: "Skills" },
   { href: "/certifications", label: "Certifications" },
-  { href: "/contact", label: "Contact" },
+  // { href: "/contact", label: "Contact" }, On hold
 ];
 
 export function Header() {
@@ -63,4 +63,3 @@ export function Header() {
     </header>
   );
 }
-

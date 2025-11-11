@@ -8,8 +8,6 @@ export const profile = {
   email: "yu.marcjason@outlook.com",
   phone: "+63 999 409 7648",
   links: {
-    cv: "/Marc-Jason-Yu-CV.pdf", // put your real file under /public
-    linkedin: "https://www.linkedin.com",
-    github: "https://github.com",
+    linkedin: "https://www.linkedin.com/in/marc-jason-yu/",
   },
 };
