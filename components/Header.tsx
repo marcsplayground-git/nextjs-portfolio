@@ -54,9 +54,6 @@ export function Header() {
                 {l.label}
               </Link>
             ))}
-            <a href="/Marc-Jason-Yu-CV.pdf" className="btn btn-primary">
-              Download CV
-            </a>
           </div>
         </div>
       )}
