@@ -1,3 +1,5 @@
+/* On hold
+
 import { SectionHeader } from "@/components/SectionHeader";
 import { ContactForm } from "@/components/ContactForm";
 
@@ -17,3 +19,5 @@ export default function ContactPage() {
     </section>
   );
 }
+
+*/
