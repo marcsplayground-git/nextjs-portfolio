@@ -6,54 +6,54 @@ type Idea = {
   summary: string;
   focus: string[];
   impact: string;
-  status?: "Planned" | "Researching" | "Concept";
+  status?: "Planned" | "Researching" | "Concept" | "In Progress";
   eta?: string;
 };
 
 const ideas: Idea[] = [
-  {
-    title: "AI-Powered Employee Copilot",
-    summary:
-      "A conversational Copilot integrated with Microsoft Teams and Dataverse that assists HR and managers with requests, onboarding steps, and analytics. It understands company policies and automates form submissions using natural language.",
-    focus: ["Azure OpenAI", "Copilot Studio", "Teams", "Power Automate"],
-    impact: "Reduce HR response time and manual task handling by 60%.",
-    status: "Researching",
-    eta: "Q2 2026",
-  },
-  {
-    title: "Azure Foundry App Generator",
-    summary:
-      "A low-code platform accelerator that uses Azure Foundry models to generate app scaffolds, form logic, and security roles from schema definitions. Aims to merge AI-assisted code with Power Platform extensibility.",
-    focus: ["Azure Foundry", "Next.js", "Power Platform", "DevOps Pipelines"],
-    impact: "Cut app prototyping time from weeks to days.",
-    status: "Concept",
-    eta: "Q3 2026",
-  },
-  {
-    title: "Smart Form Optimizer",
-    summary:
-      "An AI service that analyzes form submissions and usage telemetry, identifies redundant steps, and recommends improvements. Integrates into Power Apps or web apps as a feedback Copilot.",
-    focus: ["Cognitive Services", "Telemetry", "Power Apps"],
-    impact: "Increase user completion rate and improve UX via adaptive design.",
-    status: "Planned",
-    eta: "Q1 2026",
-  },
   {
     title: "AI-Driven Knowledge Portal",
     summary:
       "A web app combining RAG (retrieval-augmented generation) with Azure AI Search to surface company policies, FAQs, and workflow instructions through chat. Powered by vector search and contextual grounding.",
     focus: ["Azure AI Search", "OpenAI Embeddings", "Next.js", "RAG"],
     impact: "Turn documentation into an interactive Copilot experience.",
-    status: "Researching",
+    status: "In Progress",
+    eta: "Q1 2026",
+  },
+  {
+    title: "Intelligent Helpdesk Copilot",
+    summary:
+      "A multi-turn support agent that answers IT questions and performs real actions (password resets, ticket creation) via function calling, grounded on an internal knowledge index.",
+    focus: ["Function Calling", "Teams Bot", "Azure Functions", "AI Search"],
+    impact: "Deflects L1 tickets and accelerates IT support.",
+    status: "Planned",
     eta: "Q2 2026",
   },
   {
-    title: "Adaptive Workflow Orchestrator",
+    title: "AI Code Reviewer & Pair Programmer",
     summary:
-      "A framework that predicts next best actions in multistage approvals using ML models trained on historical workflow data. Integrates insights back into Power Automate or Logic Apps for dynamic routing.",
-    focus: ["Azure ML", "Power Automate", "Dataverse", "Predictive AI"],
-    impact: "Reduce bottlenecks and balance reviewer workload automatically.",
-    status: "Concept",
+      "A CI-native, tenant-hosted reviewer that uses RAG over your repo and org policies to produce SARIF and structured PR comments. Integrates with GitHub/Azure DevOps and enforces quality gates.",
+    focus: ["RAG on Code", "SARIF", "Azure Functions", "DevOps API"],
+    impact: "Improves review quality while reducing time-to-merge.",
+    status: "Planned",
+    eta: "Q2 2026",
+  },
+  {
+    title: "Compliance Policy Copilot",
+    summary:
+      "A Teams-based assistant that answers policy/audit questions using RAG over SharePoint and Dataverse, with citations and evidence links.",
+    focus: ["SharePoint", "AI Search", "Teams", "RAG"],
+    impact: "Cuts policy lookup from hours to minutes.",
+    status: "Planned",
+    eta: "Q3 2026",
+  },
+  {
+    title: "CloudOps Copilot Agent",
+    summary:
+      "An agent that analyzes Azure Monitor logs, explains incidents in plain English, and can trigger safe remediations with approval.",
+    focus: ["Azure Monitor", "Function Calling", "Agents", "App Insights"],
+    impact: "Reduces MTTR and on-call fatigue.",
+    status: "Planned",
     eta: "Q4 2026",
   },
 ];
