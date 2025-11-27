@@ -1,4 +1,3 @@
-// components/FutureIdeas.tsx
 import { SectionHeader } from "@/components/SectionHeader";
 
 type Idea = {
@@ -58,9 +57,61 @@ const ideas: Idea[] = [
   },
 ];
 
+type Portfolio = {
+  title: string;
+  summary: string;
+  focus: string[];
+  impact: string;
+  eta?: string;
+  link: string;
+};
+
+const porfolio: Portfolio[] = [
+  {
+    title: "Unified Request Management",
+    summary:
+      "An end-to-end request platform built on Dataverse, Canvas + Model-driven apps, Power Automate, and Azure DevOps integration.",
+    focus: ["Power Apps", "Dataverse", "Power Automate", "Azure DevOps"],
+    impact: "Centralizes request handling across all departments.",
+    link: "/projects/unifiedrequestmanagement",
+  },
+];
+
 export function Projects() {
   return (
     <section className="section container">
+      <SectionHeader
+        eyebrow="Portfolio"
+        title="Feature Projects"
+        description="A curated collection of solutions showcasing my work across Power Platform, AI, cloud engineering, and modern application development."
+      />
+
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8 pb-20">
+        {porfolio.map((i) => (
+          <a
+            key={i.title}
+            href={i.link}
+            className="card rounded-2xl flex flex-col justify-between p-5 space-y-3 hover:border-indigo-300 transition"
+          >
+            <div className="flex items-center justify-between">
+              <h3 className="font-semibold text-indigo-600">{i.title}</h3>
+            </div>
+
+            <p className="text-sm text-slate-600">{i.summary}</p>
+
+            <div className="flex flex-wrap gap-2">
+              {i.focus.map((f) => (
+                <span key={f} className="badge">
+                  {f}
+                </span>
+              ))}
+            </div>
+
+            <p className="text-xs text-slate-500 italic">{i.impact}</p>
+          </a>
+        ))}
+      </div>
+
       <SectionHeader
         eyebrow="Innovation"
         title="Future Ideas Projects"
