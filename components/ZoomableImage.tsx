@@ -7,7 +7,6 @@ type ZoomableImageProps = {
   src: string;
   alt: string;
   caption?: string;
-  /** Tailwind classes for the small image container (e.g. h-64) */
   wrapperClassName?: string;
 };
 

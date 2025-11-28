@@ -33,8 +33,12 @@ const galleryItems = [
     src: "/projects/urm/flow-architecture.png",
   },
   {
-    title: "Flow - Solution Architecture",
+    title: "Solution - High Level Architecture",
     src: "/projects/urm/solution-architecture.png",
+  },
+  {
+    title: "Dataverse - Architecture",
+    src: "/projects/urm/dataverse-architecture.png",
   },
   {
     title: "Flow - Failed Orchestration",

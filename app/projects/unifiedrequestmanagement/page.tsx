@@ -1,7 +1,6 @@
 import { URMGalleryButton } from "@/components/URMGalleryButton";
 import { SectionHeader } from "@/components/SectionHeader";
 import { ZoomableImage } from "@/components/ZoomableImage";
-import Image from "next/image";
 
 export default function UnifiedRequestManagementPage() {
   return (
@@ -11,7 +10,7 @@ export default function UnifiedRequestManagementPage() {
         <div className="container grid gap-10 lg:grid-cols-[3fr,2fr] items-start">
           <div className="space-y-6">
             <SectionHeader
-              eyebrow="Case Study"
+              eyebrow="Project"
               title="Unified Request Management (URM)"
               description="Centralizing internal requests across IT, HR, Facilities, and Engineering."
             />
