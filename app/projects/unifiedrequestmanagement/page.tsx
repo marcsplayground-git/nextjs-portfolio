@@ -172,7 +172,7 @@ export default function UnifiedRequestManagementPage() {
       <section className="section bg-slate-50/70 dark:bg-slate-900/40">
         <div className="container space-y-6">
           <p className="eyebrow">My Role in the Solution</p>
-          <h2 className="h2">Solution Architect & Developer</h2>
+          <h2 className="h2">Solution Architect + Developer</h2>
 
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
             <div className="space-y-3">
