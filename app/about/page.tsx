@@ -7,10 +7,13 @@ export default function AboutPage() {
       <div className="lg:col-span-5 space-y-4">
         <SectionHeader eyebrow="About" title="Marc Jason Yu" />
         <p className="text-slate-600">
-          Software Engineer with ~4 years of experience specializing in Power
-          Platform, with experience in Microsoft Azure and cloud-based
-          solutions. Proven track record of enhancing business processes and
-          collaborating with cross-functional teams.
+          Software Engineer with 4 years hands-on experience in full-stack
+          development and low-code platform solutions. Specializing in Power
+          Platform development with strong background in designing data models,
+          optimizing application performance, and collaborating with
+          cross-functional teams. Adept at solving complex problems, improving
+          processes, and delivering reliable, user-focused software across
+          various technology stacks
         </p>
         <ul className="text-sm text-slate-600 space-y-1">
           <li>Cebu City, Philippines 6000</li>
