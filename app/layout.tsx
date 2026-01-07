@@ -18,11 +18,6 @@ export default function RootLayout({
       <body>
         <Header />
         <main>{children}</main>
-        <iframe
-          src="https://copilotstudio.microsoft.com/environments/72a87b98-5832-ead9-a67c-bd68f643c519/bots/copilots_header_contoso_agent1/webchat?_version_=2"
-          width={100}
-          height={100}
-        ></iframe>
         <Footer />
       </body>
     </html>
