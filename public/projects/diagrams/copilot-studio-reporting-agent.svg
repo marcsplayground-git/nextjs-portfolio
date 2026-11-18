@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="520" viewBox="0 0 480 520" role="img" aria-labelledby="title desc">
+<title id="title">Helpdesk ticket monitoring</title>
+<desc id="desc">High-level overview. Arrows show the workflow sequence, not API dependencies.</desc>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6" fill="#6366f1"/></marker></defs>
+<rect width="480" height="520" rx="12" fill="#f8fafc"/>
+<rect x="20" y="20" width="440" height="76" rx="10" fill="#eef2ff" stroke="#c7d2fe"/>
+<text x="240" y="49" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" font-weight="600" fill="#312e81">Tickets and violation matrix</text>
+<text x="240" y="73" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#475569">Active, aging and at-risk tickets</text>
+<path d="M240 96 V115" stroke="#6366f1" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="20" y="120" width="440" height="76" rx="10" fill="#eef2ff" stroke="#c7d2fe"/>
+<text x="240" y="149" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" font-weight="600" fill="#312e81">Copilot Studio and Power Automate</text>
+<text x="240" y="173" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#475569">Check tickets against defined rules</text>
+<path d="M240 196 V215" stroke="#6366f1" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="20" y="220" width="440" height="76" rx="10" fill="#eef2ff" stroke="#c7d2fe"/>
+<text x="240" y="249" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" font-weight="600" fill="#312e81">Dataverse violation tracker</text>
+<text x="240" y="273" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#475569">Record detected violations</text>
+<path d="M240 296 V335 H130 V365 M240 335 H350 V365" fill="none" stroke="#6366f1" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="20" y="370" width="210" height="100" rx="10" fill="#eef2ff" stroke="#c7d2fe"/>
+<text x="125" y="401" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" font-weight="600" fill="#312e81">Microsoft Teams</text>
+<text x="125" y="427" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#475569">Notify assigned</text>
+<text x="125" y="446" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#475569">helpdesk agents</text>
+<rect x="250" y="370" width="210" height="100" rx="10" fill="#eef2ff" stroke="#c7d2fe"/>
+<text x="355" y="401" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" font-weight="600" fill="#312e81">Daily summary</text>
+<text x="355" y="427" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#475569">Consolidated report</text>
+<text x="355" y="446" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#475569">for the manager</text>
+</svg>

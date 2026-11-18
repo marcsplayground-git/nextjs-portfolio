@@ -1,9 +1,9 @@
 // lib/profile.ts
 export const profile = {
   name: "Marc Jason Yu",
-  title: "Software Engineer — Power Platform + Azure",
+  title: "Power Platform Developer — C# + Azure",
   summary:
-    "Software Engineer with 4 years hands-on experience in full-stack development and low-code platform solutions. Specializing in Power Platform development with strong background in designing data models, optimizing application performance, and collaborating with cross-functional teams. Adept at solving complex problems, improving processes, and delivering reliable, user-focused software across various technology stacks.",
+    "I build business applications and automate operational workflows with Power Platform, C# and Azure. With 5 years of experience, my work includes client-branded document generation, automated helpdesk reporting, and a code-app starter kit adopted by 50+ developers. I work with users to define the problem, deliver the solution, and support it in production.",
   location: "Cebu City, Philippines",
   email: "yu.marcjason@outlook.com",
   phone: "+63 999 409 7648",

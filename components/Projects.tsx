@@ -1,79 +1,39 @@
 import { SectionHeader } from "@/components/SectionHeader";
 
-type Idea = {
-  title: string;
-  summary: string;
-  focus: string[];
-  impact: string;
-  status?: "Planned" | "Researching" | "Concept" | "In Progress";
-  eta?: string;
-};
-
-const ideas: Idea[] = [
+const projects = [
   {
-    title: "AI-Driven Knowledge Portal",
-    summary:
-      "A web app combining RAG (retrieval-augmented generation) with Azure AI Search to surface company policies, FAQs, and workflow instructions through chat. Powered by vector search and contextual grounding.",
-    focus: ["Azure AI Search", "OpenAI Embeddings", "Next.js", "RAG"],
-    impact: "Turn documentation into an interactive Copilot experience.",
-    status: "In Progress",
-    eta: "Q1 2026",
+    id: "client-branded-reports",
+    title: "Client-branded Word reports",
+    summary: "Generate a client-branded Word report directly from a canvas app. Power Automate retrieves the client's SharePoint template, and a C# Azure Function assembles the document for download.",
+    outcome: "18 client templates. Report preparation reduced from about eight hours to one hour.",
+    stack: ["Power Apps", "Power Automate", "SharePoint", "Azure Functions", "Open XML SDK"],
+    diagram: "client-branded-report-generator",
+    alt: "Canvas app sends report data to Power Automate, which retrieves a SharePoint template and calls an Azure Function to return a branded Word document.",
   },
   {
-    title: "Intelligent Helpdesk Copilot",
-    summary:
-      "A multi-turn support agent that answers IT questions and performs real actions (password resets, ticket creation) via function calling, grounded on an internal knowledge index.",
-    focus: ["Function Calling", "Teams Bot", "Azure Functions", "AI Search"],
-    impact: "Deflects L1 tickets and accelerates IT support.",
-    status: "Planned",
-    eta: "Q2 2026",
+    id: "helpdesk-reporting",
+    title: "Automated helpdesk ticket monitoring",
+    summary: "A Copilot Studio agent checks active, aging and at-risk tickets against a defined violation matrix. It records violations, notifies assigned helpdesk agents through Teams, and produces daily summaries.",
+    outcome: "Automates checks and notifications previously handled by a manager as part of a 1–2-hour daily review.",
+    stack: ["Copilot Studio", "Power Automate", "Dataverse", "Microsoft Teams"],
+    diagram: "copilot-studio-reporting-agent",
+    alt: "Ticket data and a violation matrix feed automated checks; violations are recorded in a tracker, assigned agents receive Teams notifications, and managers receive daily summaries.",
   },
   {
-    title: "AI Code Reviewer & Pair Programmer",
-    summary:
-      "A CI-native, tenant-hosted reviewer that uses RAG over your repo and org policies to produce SARIF and structured PR comments. Integrates with GitHub/Azure DevOps and enforces quality gates.",
-    focus: ["RAG on Code", "SARIF", "Azure Functions", "DevOps API"],
-    impact: "Improves review quality while reducing time-to-merge.",
-    status: "Planned",
-    eta: "Q2 2026",
-  },
-  {
-    title: "Compliance Policy Copilot",
-    summary:
-      "A Teams-based assistant that answers policy/audit questions using RAG over SharePoint and Dataverse, with citations and evidence links.",
-    focus: ["SharePoint", "AI Search", "Teams", "RAG"],
-    impact: "Cuts policy lookup from hours to minutes.",
-    status: "Planned",
-    eta: "Q3 2026",
-  },
-  {
-    title: "CloudOps Copilot Agent",
-    summary:
-      "An agent that analyzes Azure Monitor logs, explains incidents in plain English, and can trigger safe remediations with approval.",
-    focus: ["Azure Monitor", "Function Calling", "Agents", "App Insights"],
-    impact: "Reduces MTTR and on-call fatigue.",
-    status: "Planned",
-    eta: "Q4 2026",
-  },
-];
-
-type Portfolio = {
-  title: string;
-  summary: string;
-  focus: string[];
-  impact: string;
-  eta?: string;
-  link: string;
-};
-
-const porfolio: Portfolio[] = [
-  {
+    id: "unified-request-management",
     title: "Unified Request Management",
-    summary:
-      "An end-to-end request platform built on Dataverse, Canvas + Model-driven apps, Power Automate, and Azure DevOps integration.",
-    focus: ["Power Apps", "Dataverse", "Power Automate", "Azure DevOps"],
-    impact: "Centralizes request handling across all departments.",
-    link: "/projects/unifiedrequestmanagement",
+    summary: "One intake process connects a canvas request portal, a model-driven operations app and Dataverse. Power Automate handles routing and approvals, with linked Azure DevOps work items for engineering requests.",
+    outcome: "Replaces scattered request channels with a traceable process from submission through approval and delivery.",
+    stack: ["Power Apps", "Dataverse", "Power Automate", "Azure DevOps", "Power Platform Pipelines"],
+    diagram: "urm",
+    alt: "Canvas and model-driven apps share Dataverse records; Power Automate manages assignments, approvals and notifications, and links engineering requests to Azure DevOps work items.",
+  },
+  {
+    id: "code-apps-starter-kit",
+    title: "A shared foundation for code apps",
+    summary: "A Git-based starter kit provides shared application structure, branding and reusable components for Dataverse-backed code apps. Delivery also includes Time Tracker, Training Curriculum, and Roll On/Off Checklist.",
+    outcome: "Adopted by 50+ developers to standardize code-app development.",
+    stack: ["Power Apps code apps", "TypeScript", "React", "Dataverse", "Git"],
   },
 ];
 
@@ -82,80 +42,28 @@ export function Projects() {
     <section className="section container">
       <SectionHeader
         eyebrow="Portfolio"
-        title="Feature Projects"
-        description="A curated collection of solutions showcasing my work across Power Platform, AI, cloud engineering, and modern application development."
+        title="Selected projects"
+        description="Business applications and automation built for everyday operations. Project descriptions and diagrams are anonymized."
       />
-
-      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8 pb-20">
-        {porfolio.map((i) => (
-          <a
-            key={i.title}
-            href={i.link}
-            className="card rounded-2xl flex flex-col justify-between p-5 space-y-3 hover:border-indigo-300 transition"
-          >
-            <div className="flex items-center justify-between">
-              <h3 className="font-semibold text-indigo-600">{i.title}</h3>
-            </div>
-
-            <p className="text-sm text-slate-600">{i.summary}</p>
-
+      <div className="grid lg:grid-cols-2 items-start gap-8 mt-8">
+        {projects.map((project) => (
+          <article key={project.id} id={project.id} className="card rounded-2xl p-5 sm:p-7 space-y-5 scroll-mt-24">
+            <h3 className="text-xl font-semibold text-indigo-600">{project.title}</h3>
+            <p className="text-slate-600 leading-relaxed">{project.summary}</p>
+            <p className="font-medium text-slate-900">{project.outcome}</p>
             <div className="flex flex-wrap gap-2">
-              {i.focus.map((f) => (
-                <span key={f} className="badge">
-                  {f}
-                </span>
-              ))}
+              {project.stack.map((tool) => <span key={tool} className="badge">{tool}</span>)}
             </div>
-
-            <p className="text-xs text-slate-500 italic">{i.impact}</p>
-          </a>
-        ))}
-      </div>
-
-      <SectionHeader
-        eyebrow="Innovation"
-        title="Future Ideas Projects"
-        description="Exploring the intersection of Azure AI, Copilot, and cloud engineering to design the next generation of intelligent applications."
-      />
-
-      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
-        {ideas.map((i) => (
-          <div
-            key={i.title}
-            className="card rounded-2xl flex flex-col justify-between p-5 space-y-3 hover:border-indigo-300 transition"
-          >
-            <div className="flex items-center justify-between">
-              <h3 className="font-semibold text-indigo-600">{i.title}</h3>
-              <span
-                className={`text-[10px] px-2 py-0.5 rounded-full border
-                ${
-                  i.status === "Planned"
-                    ? "bg-indigo-100 border-indigo-300 text-indigo-700"
-                    : i.status === "Researching"
-                    ? "bg-sky-100 border-sky-300 text-sky-700"
-                    : "bg-slate-100 border-slate-200 text-slate-600"
-                }`}
-              >
-                {i.status}
-              </span>
-            </div>
-
-            <p className="text-sm text-slate-600">{i.summary}</p>
-
-            <div className="flex flex-wrap gap-2">
-              {i.focus.map((f) => (
-                <span key={f} className="badge">
-                  {f}
-                </span>
-              ))}
-            </div>
-
-            <p className="text-xs text-slate-500 italic">{i.impact}</p>
-
-            <div className="flex justify-between items-center text-xs text-slate-500">
-              <span>ETA {i.eta ?? "TBD"}</span>
-            </div>
-          </div>
+            {project.diagram && (
+              <figure className="border-t border-slate-200 pt-5">
+                <a href={`/projects/diagrams/${project.diagram}.svg`} className="block rounded-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-indigo-600" aria-label={`Open ${project.title} workflow diagram at full size`}>
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src={`/projects/diagrams/${project.diagram}.svg`} alt={project.alt} width={480} height={520} className="w-full h-auto" loading="lazy" />
+                  <span className="link text-sm mt-2 inline-block">View workflow diagram</span>
+                </a>
+              </figure>
+            )}
+          </article>
         ))}
       </div>
     </section>

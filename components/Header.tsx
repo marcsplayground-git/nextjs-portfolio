@@ -37,12 +37,14 @@ export function Header() {
           className="md:hidden p-2"
           onClick={() => setOpen(!open)}
           aria-label="Toggle menu"
+          aria-expanded={open}
+          aria-controls="mobile-navigation"
         >
           {open ? <X /> : <Menu />}
         </button>
       </div>
       {open && (
-        <div className="md:hidden border-t bg-white/80 backdrop-blur">
+        <div id="mobile-navigation" className="md:hidden border-t bg-white/80 backdrop-blur">
           <div className="container py-4 flex flex-col gap-3">
             {links.map((l) => (
               <Link

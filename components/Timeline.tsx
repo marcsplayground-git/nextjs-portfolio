@@ -1,93 +1,78 @@
-"use client";
-
 type TimelineItem = {
   role: string;
   company: string;
   dates: string;
-  description?: string;
-  isAccent?: boolean;
+  highlights: string[];
 };
 
 const timelineData: TimelineItem[] = [
   {
     role: "Power Platform Developer",
+    company: "Bravissimo Resourcing, Inc.",
+    dates: "June 2026 – Present",
+    highlights: [
+      "Created a code-app starter kit adopted by 50+ developers, with shared application structure, branding and reusable components.",
+      "Built Time Tracker, Training Curriculum, and Roll On/Off Checklist on Dataverse.",
+      "Helped establish deployment and access standards: service accounts, Microsoft Entra ID groups, and appropriate security roles.",
+      "Gather requirements, improve applications, and support users in production.",
+    ],
+  },
+  {
+    role: "Power Platform Specialist",
+    company: "BruntWork",
+    dates: "January 2026 – June 2026",
+    highlights: [
+      "Reduced branded Word report preparation from about eight hours to one hour, supporting 18 client templates through Power Apps, Power Automate and a C# Azure Function.",
+      "Built a Copilot Studio agent for rule-based ticket checks, violation tracking, Teams notifications and daily summaries.",
+      "Delivered canvas apps for field technicians and model-driven apps with C# plugins and JavaScript form scripts.",
+      "Led requirements discovery, advised on licensing, and applied least-privilege access and Solutions-based ALM.",
+    ],
+  },
+  {
+    role: "Power Platform Developer",
     company: "FutureAbility",
-    dates: "Aug 2023 - July 2025",
-    description:
-      "Created and implemented tailored business applications aligned with client project specifications, with a strong focus on improving user interfaces, streamlining workflows, and ensuring seamless data integration using Power Apps and Power Pages. Actively engaged in identifying, diagnosing, and resolving bugs to enhance application stability and overall user experience. Additionally, implemented security models by configuring Dataverse security roles and applying item-level permissions in SharePoint to control access based on user roles, ensuring sensitive data was protected across all environments.",
-    isAccent: true,
+    dates: "August 2023 – July 2025",
+    highlights: [
+      "Developed Power Apps and Power Pages solutions, including model-driven apps with C# plugins and JavaScript form scripts.",
+      "Implemented application interfaces, workflows and data integrations, and resolved defects across client applications.",
+      "Configured Dataverse security roles and SharePoint item-level permissions to restrict access by user role.",
+    ],
   },
   {
     role: "Power Apps Developer",
     company: "Peak Support",
-    dates: "May 2023 - Aug 2023",
-    description:
-      "Developed and optimized business applications by implementing features and UI/UX designs based on client requirements. Leveraged data modeling and integration within Dataverse to ensure seamless data flow. Continuously enhanced application performance, while also providing detailed technical documentation and user guides to support end-users.",
+    dates: "May 2023 – August 2023",
+    highlights: [
+      "Developed Power Apps features and interfaces, with Dataverse data models and integrations.",
+      "Improved application performance and prepared technical documentation and user guides.",
+    ],
   },
   {
     role: "Application Development Associate",
     company: "Accenture Inc.",
-    dates: "Nov 2021 - May 2023",
-    description:
-      "Designed and built proof-of-concept (POC) applications based on client requirements, implementing user interfaces as designed in Figma. Conducted regression testing to ensure stability and resolved bugs reported by users and developers. Additionally, optimized existing flows to better scale with evolving business needs.",
+    dates: "November 2021 – May 2023",
+    highlights: [
+      "Built proof-of-concept applications from client requirements and Figma designs.",
+      "Performed regression testing, resolved defects, and optimized Power Automate flows.",
+    ],
   },
 ];
 
 export function Timeline() {
   return (
-    <div className="relative space-y-4 mt-6">
-      {/* Vertical line */}
-      <div className="absolute left-1.5 top-1.5 bottom-2 w-px bg-slate-200 dark:bg-slate-700" />
-
-      {timelineData.map((item, idx) => (
-        <div key={idx} className="relative pl-6 group">
-          {/* Pin */}
-          <div
-            className={`absolute left-0 top-1.5 w-3 h-3 rounded-full border-2 transition-colors ${
-              item.isAccent
-                ? "border-indigo-500 bg-indigo-500"
-                : "border-slate-300 bg-white dark:bg-slate-950 group-hover:bg-indigo-500 group-hover:border-indigo-500"
-            }`}
-          />
-
-          {/* Content */}
-          <div className="space-y-1">
-            <div className="flex items-center justify-between">
-              <h3
-                className={`font-semibold transition-colors ${
-                  item.isAccent
-                    ? "text-indigo-600 dark:text-indigo-400"
-                    : "group-hover:text-indigo-500"
-                }`}
-              >
-                {item.role}
-              </h3>
-              <span
-                className={`text-[10px] px-1.5 py-0.5 rounded-full border text-slate-500 dark:text-slate-300 bg-slate-100 dark:bg-slate-800 border-slate-200 dark:border-slate-700 ${
-                  item.isAccent
-                    ? "bg-indigo-100 border-indigo-300 text-indigo-700"
-                    : ""
-                }`}
-              >
-                {item.dates}
-              </span>
-            </div>
-
-            <span
-              className={`text-sm ${
-                item.isAccent
-                  ? "text-indigo-600/70"
-                  : "text-slate-600 dark:text-slate-400"
-              }`}
-            >
-              {item.company}
-            </span>
-
-            <p className="mt-2 pl-5 text-justify text-slate-600 space-y-1">
-              {item.description}
-            </p>
+    <div className="relative space-y-10 mt-6 border-l border-slate-200 ml-1.5">
+      {timelineData.map((item, index) => (
+        <article key={item.company} className="relative pl-6">
+          <div className={`absolute -left-1.5 top-1.5 w-3 h-3 rounded-full border-2 ${index === 0 ? "border-indigo-500 bg-indigo-500" : "border-slate-300 bg-white"}`} />
+          <div className="flex flex-col sm:flex-row sm:justify-between sm:items-baseline gap-2">
+            <h3 className="font-semibold text-lg">{item.role}</h3>
+            <p className="text-sm text-slate-500 shrink-0">{item.dates}</p>
           </div>
-        </div>
+          <p className="text-indigo-600 mt-1">{item.company}</p>
+          <ul className="list-disc pl-5 mt-3 space-y-2 text-slate-600 leading-relaxed">
+            {item.highlights.map((highlight) => <li key={highlight}>{highlight}</li>)}
+          </ul>
+        </article>
       ))}
     </div>
   );
