@@ -1,9 +1,9 @@
 const groups = [
-  { name: "Power Platform", items: ["Canvas apps", "Model-driven apps", "Code apps", "Power Automate", "Power Pages", "Copilot Studio", "Power BI"] },
-  { name: "Custom development", items: ["C#", ".NET", "TypeScript", "JavaScript", "React", "HTML/CSS", "Liquid", "Open XML SDK"] },
-  { name: "Data", items: ["Dataverse", "SharePoint", "Azure SQL", "SQL Server", "Azure Cosmos DB", "PostgreSQL"] },
+  { name: "Power Platform", items: ["Power Apps", "Power Automate", "Power Pages", "Copilot Studio", "Power BI"] },
+  { name: "Development", items: ["C#", ".NET", "HTML/CSS", "JavaScript/TypeScript", "Liquid", "Open XML SDK"] },
+  { name: "Data", items: ["Dataverse", "SharePoint", "Azure SQL", "SQL Server", "Cosmos DB", "PostgreSQL"] },
   { name: "Azure", items: ["Azure Functions", "App Service", "Storage Accounts"] },
-  { name: "Security and delivery", items: ["Dataverse security roles", "Microsoft Entra ID groups", "Solutions and ALM", "Git", "Azure DevOps", "Jira"] },
+  { name: "Tools and delivery", items: ["Git", "Azure DevOps", "Jira", "Solutions/ALM", "Microsoft Entra ID"] },
 ];
 
 export function Skills() {

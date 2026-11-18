@@ -12,7 +12,7 @@ const timelineData: TimelineItem[] = [
     dates: "June 2026 – Present",
     highlights: [
       "Created a code-app starter kit adopted by 50+ developers, with shared application structure, branding and reusable components.",
-      "Built Time Tracker, Training Curriculum, and Roll On/Off Checklist on Dataverse.",
+      "Built three Dataverse-backed code apps—Time Tracker, Training Curriculum, and Roll On/Off Checklist—using Claude Code for prototyping and AI-assisted development.",
       "Helped establish deployment and access standards: service accounts, Microsoft Entra ID groups, and appropriate security roles.",
       "Gather requirements, improve applications, and support users in production.",
     ],
@@ -23,7 +23,7 @@ const timelineData: TimelineItem[] = [
     dates: "January 2026 – June 2026",
     highlights: [
       "Reduced branded Word report preparation from about eight hours to one hour, supporting 18 client templates through Power Apps, Power Automate and a C# Azure Function.",
-      "Built a Copilot Studio agent for rule-based ticket checks, violation tracking, Teams notifications and daily summaries.",
+      "Built an autonomous Copilot Studio agent that checks helpdesk tickets against a violation matrix, records exceptions, notifies assigned agents through Teams, and produces daily summaries. Automated checks and notifications previously handled during a manager’s 1–2-hour daily review.",
       "Delivered canvas apps for field technicians and model-driven apps with C# plugins and JavaScript form scripts.",
       "Led requirements discovery, advised on licensing, and applied least-privilege access and Solutions-based ALM.",
     ],

@@ -9,3 +9,10 @@
 - Browser verification: Edge preview checked at 1440px desktop and 390px mobile. All diagrams load, page content fits the viewport, and mobile navigation opens and closes through page selection. Recent experience entries render. Diagram outputs branch to notifications and summaries; the starter-kit card no longer stretches into an empty panel. Real-device testing was not performed.
 - Routing: Routine implementation handled directly with no workers or paid model calls. Source and verification stay in the project repo; Fred's previously pending lifecycle-log changes were committed and pushed separately to syntra-org at 5139ddd before implementation.
 - Next: Review the prepared changes and authorize production publication. No Vercel deployment or public demo-repository creation was performed. Local archives require separate backup; previous live screenshots remain accessible until the refreshed version is deployed and any retained platform copies are addressed.
+
+## [2026-11-19 Asia/Manila] — Align portfolio with approved resume
+
+- Outcome: Updated the local portfolio branch to match the approved resume wording. Home and About share the Developer and Solution Architect introduction with 5 years of experience; Skills uses the same five compact categories. Experience combines Claude Code with the three delivered code apps and uses the revised reporting-agent bullet. The reporting project card now uses the shorter description and qualified workload baseline.
+- Verification: Production build, TypeScript, whitespace and the six-page runtime check pass, including the legacy redirect and all 16 retired image URLs. An explicit comparison confirms the shared introduction and every listed skill match the approved resume. Contact links, metadata and social previews remain unchanged.
+- Limits: Browser connection was unavailable for repeat visual checks; the earlier refresh's desktop/mobile checks are historical evidence only. Production deployment and remote portfolio main remain unchanged. Work handled directly, no workers or paid model calls.
+- Next: Review and authorize publication to the existing portfolio deployment.

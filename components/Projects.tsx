@@ -13,8 +13,8 @@ const projects = [
   {
     id: "helpdesk-reporting",
     title: "Automated helpdesk ticket monitoring",
-    summary: "A Copilot Studio agent checks active, aging and at-risk tickets against a defined violation matrix. It records violations, notifies assigned helpdesk agents through Teams, and produces daily summaries.",
-    outcome: "Automates checks and notifications previously handled by a manager as part of a 1–2-hour daily review.",
+    summary: "A Copilot Studio agent checks helpdesk tickets against a violation matrix, records exceptions in a tracker, notifies assigned agents through Teams, and produces daily summaries.",
+    outcome: "Automates checks and notifications previously handled during a manager’s 1–2-hour daily review.",
     stack: ["Copilot Studio", "Power Automate", "Dataverse", "Microsoft Teams"],
     diagram: "copilot-studio-reporting-agent",
     alt: "Ticket data and a violation matrix feed automated checks; violations are recorded in a tracker, assigned agents receive Teams notifications, and managers receive daily summaries.",
