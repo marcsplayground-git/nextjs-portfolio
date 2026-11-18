@@ -16,3 +16,9 @@
 - Verification: Production build, TypeScript, whitespace and the six-page runtime check pass, including the legacy redirect and all 16 retired image URLs. An explicit comparison confirms the shared introduction and every listed skill match the approved resume. Contact links, metadata and social previews remain unchanged.
 - Limits: Browser connection was unavailable for repeat visual checks; the earlier refresh's desktop/mobile checks are historical evidence only. Production deployment and remote portfolio main remain unchanged. Work handled directly, no workers or paid model calls.
 - Next: Review and authorize publication to the existing portfolio deployment.
+
+## [2026-11-19 Asia/Manila] — Sync latest resume amendments
+
+- Outcome: Fetched both repositories; syntra-org had no incoming commits and portfolio remote main had no changes beyond the branch base. Read the latest canonical resume from marc-knowledge (563d3a6). Changed the portfolio headline and summary opening to Power Platform Developer and removed Open XML SDK from the general skills list. Retained architect certifications and the confirmed report implementation details.
+- Verification: Portfolio introduction matches the latest canonical resume exactly; the local resume mirror is refreshed. Production build, TypeScript, whitespace and six-page runtime checks pass. Item 5 files remain unchanged. No repeat browser checks; the prior browser connection was unavailable.
+- Next: Portfolio changes remain on the local refresh branch, awaiting production publication approval. No deployment or remote portfolio-main change.

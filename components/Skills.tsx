@@ -1,6 +1,6 @@
 const groups = [
   { name: "Power Platform", items: ["Power Apps", "Power Automate", "Power Pages", "Copilot Studio", "Power BI"] },
-  { name: "Development", items: ["C#", ".NET", "HTML/CSS", "JavaScript/TypeScript", "Liquid", "Open XML SDK"] },
+  { name: "Development", items: ["C#", ".NET", "HTML/CSS", "JavaScript/TypeScript", "Liquid"] },
   { name: "Data", items: ["Dataverse", "SharePoint", "Azure SQL", "SQL Server", "Cosmos DB", "PostgreSQL"] },
   { name: "Azure", items: ["Azure Functions", "App Service", "Storage Accounts"] },
   { name: "Tools and delivery", items: ["Git", "Azure DevOps", "Jira", "Solutions/ALM", "Microsoft Entra ID"] },
